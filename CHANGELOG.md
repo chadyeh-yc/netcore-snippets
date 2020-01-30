@@ -2,6 +2,22 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.1.4 - 2019-12-25
+
+* Add `services-add-auth-cookie` and `services-add-auth-jwt` snippets
+
+## 3.1.3 - 2019-12-15
+
+* Add `signalr-chat` snippet
+
+## 3.1.2 - 2019-12-14
+
+* Add `.SetIsOriginAllowedToAllowWildcardSubdomains()` to `services-add-cors` snippet
+
+## 3.1.1 - 2019-12-14
+
+* Add `services-add-cors` snippet
+
 ## 3.1.0 - 2019-12-04
 
 * Add `connstr-sqlite` snippet
