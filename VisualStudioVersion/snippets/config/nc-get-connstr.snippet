@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>nc-get-connstr</Title>
+      <Shortcut>ncGetConnstr</Shortcut>
+      <Description>config.GetConnectionString()</Description>
+      <Author>Chad Yeh</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>projectName</ID>
+          <ToolTip>Namespace Project Name</ToolTip>
+          <Default>MyProject</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>controllerName</ID>
+          <ToolTip>Controller Class Name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ControllerNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>commentControllerName</ID>
+          <ToolTip>Comment Controller Name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ControllerNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>controllerModelType</ID>
+          <ToolTip>Controller Model Type</ToolTip>
+          <Default>TType</Default>
+        </Literal>
+        <Literal>
+          <ID>commentUsing</ID>
+          <ToolTip>Using Models Namespace</ToolTip>
+		  <Default>//</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+$commentUsing$using $projectName$.Models;
+
+namespace $projectName$.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class $controllerName$Controller : ControllerBase
+    {
+        public $controllerName$Controller($END$)
+        {			
+        }
+
+        // GET api/$commentControllerName$
+        [HttpGet("")]
+        public ActionResult<IEnumerable<$controllerModelType$>> Get$controllerModelType$s()
+        {
+            // TODO: Implement code here
+            throw new NotImplementedException();
+        }
+
+        // GET api/$commentControllerName$/5
+        [HttpGet("{id}")]
+        public ActionResult<$controllerModelType$> Get$controllerModelType$ById(int id)
+        {
+            // TODO: Implement code here
+            throw new NotImplementedException();
+        }
+
+        // POST api/$commentControllerName$
+        [HttpPost("")]
+        public void Post$controllerModelType$($controllerModelType$ value)
+        {
+            // TODO: Implement code here
+            throw new NotImplementedException();
+        }
+
+        // PUT api/$commentControllerName$/5
+        [HttpPut("{id}")]
+        public void Put$controllerModelType$(int id, $controllerModelType$ value)
+        {
+            // TODO: Implement code here
+            throw new NotImplementedException();
+        }
+
+        // DELETE api/$commentControllerName$/5
+        [HttpDelete("{id}")]
+        public void Delete$controllerModelType$ById(int id)
+        {
+            // TODO: Implement code here
+            throw new NotImplementedException();
+        }
+    }
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
